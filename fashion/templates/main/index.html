@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h3>Fashion</h3>
+        
+{% block content %}
+<div>
+    {% for message in caption %}
+    {% if message.image1 %}
+    <img src = {{message.image1.url}} alt="">
+    {% endif %}
+    <a href="{% url 'home' %}"><h3>{{message.caption}}</h3></a>
+    {% endfor %}
+</div>
+{% endblock content %}
+</body>
+</html>

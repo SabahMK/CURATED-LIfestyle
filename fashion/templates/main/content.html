@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div>
+        {% for fashion in fashions %}
+        <h3>{{fashion.user}}</h3>
+        <h3>{{fashion.message}}</h3>
+        {% if fashion.image2 %}
+        <img src={{fashion.image2.url}} alt="">
+        {% endif %}
+        {% endfor %}
+    </div>
+
+{% endblock content %}
